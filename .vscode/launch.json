@@ -1,0 +1,50 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "request": "launch",
+            "type": "node",
+            "name": "Dump env",
+            "args": [
+                "-e",
+                "console.log(JSON.stringify(process.env, null, 4))"
+            ],
+            "env": {
+                "PATH": "${env:HOME}/elrondsdk/vendor-rust/bin:${env:HOME}/elrondsdk/erdpy-venv/bin:${env:HOME}/elrondsdk/arwentools:${env:HOME}/elrondsdk/nodejs/latest/bin:${env:PATH}",
+                "VIRTUAL_ENV": "${env:HOME}/elrondsdk/erdpy-venv",
+                "RUSTUP_HOME": "${env:HOME}/elrondsdk/vendor-rust",
+                "CARGO_HOME": "${env:HOME}/elrondsdk/vendor-rust"
+            }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Crowdfunding",
+            "preLaunchTask": "Crowdfunding-debug-build",
+            "program": "${workspaceFolder}/Crowdfunding/debug/target/debug/Crowdfunding-debug",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PATH": "${env:HOME}/elrondsdk/vendor-rust/bin:${env:HOME}/elrondsdk/erdpy-venv/bin:${env:HOME}/elrondsdk/arwentools:${env:HOME}/elrondsdk/nodejs/latest/bin:${env:PATH}",
+                "VIRTUAL_ENV": "${env:HOME}/elrondsdk/erdpy-venv",
+                "RUSTUP_HOME": "${env:HOME}/elrondsdk/vendor-rust",
+                "CARGO_HOME": "${env:HOME}/elrondsdk/vendor-rust"
+            }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug mycrowdfunding",
+            "preLaunchTask": "mycrowdfunding-debug-build",
+            "program": "${workspaceFolder}/mycrowdfunding/debug/target/debug/mycrowdfunding-debug",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PATH": "${env:HOME}/elrondsdk/vendor-rust/bin:${env:HOME}/elrondsdk/erdpy-venv/bin:${env:HOME}/elrondsdk/arwentools:${env:HOME}/elrondsdk/nodejs/latest/bin:${env:PATH}",
+                "VIRTUAL_ENV": "${env:HOME}/elrondsdk/erdpy-venv",
+                "RUSTUP_HOME": "${env:HOME}/elrondsdk/vendor-rust",
+                "CARGO_HOME": "${env:HOME}/elrondsdk/vendor-rust"
+            }
+        }
+    ]
+}

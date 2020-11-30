@@ -1,0 +1,7 @@
+output/**
+testnet/**
+**/erdpy.data-storage.json
+target/**
+Cargo.lock
+debug
+testnet
